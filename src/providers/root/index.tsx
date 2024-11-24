@@ -1,6 +1,6 @@
 'use client'
 
-import { LazyMotion } from 'framer-motion'
+import { LazyMotion } from 'motion/react'
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from 'next-themes'
 import type { JSX, PropsWithChildren } from 'react'
@@ -27,7 +27,6 @@ const loadFeatures = () =>
   import('./framer-lazy-feature').then((res) => res.default)
 
 const baseContexts: JSX.Element[] = [
-  // @ts-expect-error
   <ThemeProvider key="themeProvider" />,
   <JotaiStoreProvider key="jotaiStoreProvider" />,
 
